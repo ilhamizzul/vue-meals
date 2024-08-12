@@ -16,4 +16,6 @@ import { computed } from "vue";
 import store from '../store'
 
 const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('')
+
+
 </script>
