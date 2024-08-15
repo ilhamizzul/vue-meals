@@ -11,17 +11,17 @@ const routes = [
     component: Home,
   },
   {
-    path: "/by-name/:name",
+    path: "/by-name/:name?",
     name: "byName",
     component: MealsByName,
   },
   {
-    path: "/by-ingredients/:ingredients",
+    path: "/by-ingredients/:ingredients?",
     name: "byIngredients",
     component: MealsByIngredients,
   },
   {
-    path: "/by-letter/:letter",
+    path: "/by-letter/:letter?",
     name: "byLetter",
     component: MealsByLetter,
   },
