@@ -31,7 +31,7 @@
         <h2 class="text-2xl font-semobold mb-2">Measures</h2>
         <ul>
           <template v-for="(el, ind) of new Array(20)">
-            <li v-if="meal[`strMeasure${ind+1}`]" :key="ind">
+            <li v-if="meal[`strIngredient${ind+1}`] && meal[`strMeasure${ind+1}`]" :key="ind">
               {{ `${(ind+1)}. ${meal[`strMeasure${ind+1}`]}` }}
             </li>
           </template>
