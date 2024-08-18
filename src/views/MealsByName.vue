@@ -10,20 +10,14 @@
 		</div>
 		<div class="grid grid-cols-1 md:grid-cols-3 gap-5 p-8">
 			<div v-for="meal of meals" :key="meal.idMeal" class="bg-white shadow rounded-xl">
-				<router-link to="/">
+				<router-link :to="{name: 'mealDetails', params: {id: meal.idMeal}}">
 					<img :src="meal.strMealThumb" :alt="strMeal" class="rounded-t-xl h-48 w-full object-cover">
 				</router-link>
 				<div class="p-3">
 					<h3 class="font-semibold">{{ meal.strMeal }}</h3>
 					<p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem cumque placeat illum alias blanditiis possimus.</p>
 					<div class="flex justify-between items-center">
-						<a 
-							:href="meal.strYoutube" 
-							target="_blank" 
-							class="px-3 py-2 rounded border border-2 text-white bg-red-500 border-red-600 hover:bg-red-600 hover:cursor-pointer transition-colors"
-						>
-							YouTube
-						</a>
+						<YouTubeButton :href="meal.strYoutube">Youtube</YouTubeButton>
 					</div>
 				</div>
 			</div>
@@ -35,6 +29,7 @@
 	import axiosClient from '../axiosClient';
 	import store from '../store';
 import { useRoute } from 'vue-router';
+import YouTubeButton from '../components/YouTubeButton.vue';
 
 	const route = useRoute();
 	const keyword = ref('');
