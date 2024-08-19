@@ -1,4 +1,5 @@
 <template>
+  <h1 class="p-8 text-4xl font-bold text-green-600">Meals for {{ ingredient.strIngredient }}</h1>
   <Meals :meals="meals"/>
 </template>
 
@@ -14,4 +15,5 @@ onMounted(() => {
   store.dispatch('searchMealsByIngredients', route.params.ingredients)
 })
 const meals = computed(() => store.state.mealsByIngredients)
+const ingredient = computed(() => store.state.ingredient)
 </script>
