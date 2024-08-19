@@ -1,6 +1,6 @@
 <template>
   <div class="max-w-[800px] mx-auto p-8">
-    <h1 class="text-5xl font-bold mb-5">{{ meal.strMeal }}</h1>
+    <h1 class="text-5xl font-bold mb-5 text-green-600">{{ meal.strMeal }}</h1>
     <img class="max-w-[100%]" :src="meal.strMealThumb" :alt="meal.strMeal">
     <div class="grid grid-cols-1 sm:grid-cols-3 text-lg py-2">
       <div>
@@ -39,7 +39,7 @@
       </div>
     </div>
     <div class="mt-4">
-      <YouTubeButton :href="meal.strYoutube">YouTube</YouTubeButton>
+      <YouTubeButton :href="meal.strYoutube"/>
       <a 
         :href="meal.strSource" 
         target="_blank" 
