@@ -1,13 +1,12 @@
-import state from "./state"
 
 export function setSearchedMeals(state, meals) {
-  state.searchedMeals = meals
+  state.searchedMeals = meals || []
 }
 
 export function setMealsByLetter(state, meals) {
-  state.mealsByLetter = meals
+  state.mealsByLetter = meals || []
 }
 
 export function setMealsByIngredients(state, meals) {
-  state.mealsByIngredients = meals
+  state.mealsByIngredients = meals || []
 }
